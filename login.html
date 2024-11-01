@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Form Registrasi</title>
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Mencegah form dikirimkan secara default
+            
+            // Tentukan username dan password yang diizinkan
+            const validUsername = "konstruksi1";
+            const validPassword = "84800440";
+            
+            // Ambil nilai dari input pengguna
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            // Validasi username dan password
+            if (username === validUsername && password === validPassword) {
+                // Jika benar, arahkan ke halaman berikutnya
+                window.location.href = "https://sites.google.com/view/mainproject2/home"; // Ganti dengan halaman tujuan
+            } else {
+                // Jika salah, tampilkan pesan error
+                alert("Username atau password salah!");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="login-container">
+        
+        <h1>SELAMAT DATANG DI PORTAL INFORMASI KONSTRUKSI 1 DIVISI MAIN PROJECT 2 </h1>
+        <h1>欢迎来到建设1部主体项目2信息门户</h1>
+            
+        <form onsubmit="validateLogin(event)">
+            <label for="username">Nama 姓名:</label>
+                
+            <input type="text" id="username" name="username" required>
+    
+                
+            <label for="password">Kata Sandi 密码:</label>
+            <input type="password" id="password" name="password" required>
+    
+            
+            <button type="submit">login</button>
+        </form>      
+    </div>
+</body> 
+
+</html>
